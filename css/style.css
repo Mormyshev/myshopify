@@ -30,108 +30,66 @@ li {
   list-style: none;
 }
 
-body {
+.wrapper {
   min-width: 320px;
+  margin: 0 auto;
 }
 
-.icon-ok {
-  width: 15px;
-  margin-left: 2px;
-  height: 14px;
-}
-
-.offer__text {
-  margin-left: 5px;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
+body {
+  width: 100%;
+  overflow: hidden;
 }
 
 .header-top {
   height: 36px;
-  background-color: #272727;
-  color: #fff;
-  font-size: 9px;
+  background-color: #222222;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 2px;
+  font-family: "Roboto";
+  color: #fff;
+  letter-spacing: 1px;
 }
-
-.header-top__settings,
+.header-top__settings {
+  display: none;
+}
+.header-top__offer .offer__icon {
+  width: 13px;
+  height: 13px;
+  margin: 0 3px;
+}
+.header-top__offer .offer__text {
+  font-size: 9px;
+}
 .header-top__services {
   display: none;
 }
 
-.header-top__offer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.header {
-  font-family: "Roboto";
-  letter-spacing: 1px;
-}
-
-.icon {
-  width: 10px;
-  height: 10px;
-}
-
-@media (min-width: 425px) {
-  .icon-ok {
-    padding-left: 1px;
-  }
-}
 @media (min-width: 481px) {
   .header-top {
     height: 42px;
+  }
+  .header-top__offer .offer__text {
     font-size: 13px;
-    padding-bottom: 2px;
   }
 }
 @media (min-width: 992px) {
-  .header-top__settings,
-.header-top__services {
-    display: flex;
-  }
-  .header-top a {
-    color: #fff;
-  }
   .header-top {
     height: 43px;
-    padding: 0 15px;
-    justify-content: space-between;
-    padding-bottom: 2px;
-  }
-  .offer__text {
     font-size: 11px;
-  }
-  .icon-ok {
-    width: 14px;
-    height: 15px;
-    margin-left: 0px;
-    margin-right: 1px;
-    padding-bottom: 1px;
-    padding-right: 0px;
+    align-items: center;
+    padding: 0 15px 2px 15px;
   }
   .header-top__settings {
     display: flex;
     align-items: center;
+    flex: 0 1 33.333%;
     padding: 0 15px;
   }
   .header-top__settings > *:not(:last-child) {
     margin-right: 8px;
     padding-right: 8px;
-  }
-  .header-top__lang,
-.header-top__currency {
     font-size: 12px;
-    font-weight: 500;
   }
   .header-top__lang::after {
     content: "";
@@ -149,7 +107,7 @@ body {
     align-items: center;
     margin-left: 4px;
   }
-  .currency__icon {
+  .header-top__currency .currency__icon {
     width: 16px;
     height: 11px;
     margin-right: 6px;
@@ -163,37 +121,46 @@ body {
     margin-left: 10px;
     top: 10px;
   }
-  .offer-title,
-.header-top__offer,
-.header-top__services {
-    font-size: 11px;
-  }
-  .header-top__settings,
-.header-top__offer,
-.header-top__services {
-    flex: 0 1 33.333%;
-  }
   .header-top__sale {
-    display: flex;
-    padding-top: 2px;
-  }
-  .offer-title,
-.offer-title--procent {
-    padding-right: 8px;
     color: #ff8149;
   }
-  .offer-title--procent {
+  .header-top__sale .offer-title--procent {
+    padding-right: 2px;
     font-size: 13px;
     font-weight: 900;
+  }
+  .header-top__offer {
+    text-align: center;
+    flex: 0 1 33.333%;
+  }
+  .header-top__offer .offer {
+    display: flex;
+    align-items: center;
+  }
+  .header-top__offer .offer__text {
+    font-size: 11px;
   }
   .header-top__services {
     display: flex;
     align-items: center;
     justify-content: right;
+    flex: 0 1 33.333%;
     padding-right: 15px;
   }
+  .icon {
+    width: 10px;
+    height: 10px;
+  }
+  .services a {
+    color: #fff;
+  }
   .services__phone {
+    padding-right: 9px;
+  }
+  .services__phone, .services__email {
     display: flex;
+    align-items: center;
+    padding-bottom: 2px;
   }
   .services__phone::after {
     content: "";
@@ -205,21 +172,17 @@ body {
     top: 20px;
   }
   .phone__icon,
-.services__mail {
+.email__icon {
     width: 20px;
     height: 20px;
     margin-right: 2px;
   }
-  .services__phone,
-.services__email {
-    display: flex;
-    align-items: center;
-    padding-bottom: 2px;
-  }
-  .services__phone {
-    padding-right: 9px;
-  }
 }
+.icon {
+  width: 10px;
+  height: 10px;
+}
+
 .menu-center {
   display: none;
 }
@@ -353,6 +316,11 @@ body {
     padding-bottom: 5px;
   }
 }
+.search-link__text,
+.account-link__text {
+  display: none;
+}
+
 .image-slider {
   box-sizing: border-box;
   width: 100%;
