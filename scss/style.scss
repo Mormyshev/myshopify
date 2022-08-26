@@ -167,15 +167,12 @@ body {
 			flex: 0 1 33.333%;
 			padding-right: 15px;
 		}
-		.icon {
-			width: 10px;
-			height: 10px;
-		}
+		
 }
 .icon {
-			width: 10px;
-			height: 10px;
-		}
+	width: 10px;
+	height: 10px;
+}
 .services {
 	
 	a {
@@ -200,13 +197,7 @@ body {
 		top: 20px
 	}
 }
-.phone {
-
-	&__icon {
-		width: 20px;
-		height: 20px;
-		margin-right: 2px;
-	}
+.phone,
 .email {
 
 	&__icon {
@@ -344,7 +335,10 @@ body {
 
 
 //-------------------MAIN-------------------
-
+.search-link__text,
+.account-link__text {
+	display: none;
+}
 .image-slider {
 	box-sizing: border-box;
 	width: 100%;
