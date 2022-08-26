@@ -200,7 +200,13 @@ body {
 		top: 20px
 	}
 }
-.phone,
+.phone {
+
+	&__icon {
+		width: 20px;
+		height: 20px;
+		margin-right: 2px;
+	}
 .email {
 
 	&__icon {
